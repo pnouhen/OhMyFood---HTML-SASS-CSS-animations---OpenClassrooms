@@ -59,19 +59,32 @@ color: #ffffff;
 
 /* Fonctionnement */
 .fonctionnement{
+    width: 73%;
+    margin: auto;
     height: 228px;
-    padding: 50px 180px 50px 180px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 25px;
 }
-.fonctionnement ol{
+.fonctionnement ul{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0;
 }
-.fonctionnement li::before {
-    left: 30px;  
+.fonctionnement li {
+    position: relative;
+    width: 31%;
+    counter-increment: list-counter;
+    list-style: none;
+}
+
+.fonctionnement li::before{
+    position: absolute;
+    content: counter(list-counter) "";
+    left: -15px;  
     top: 50%;
     transform: translateY(-50%);
     width: 24px;
@@ -83,27 +96,46 @@ color: #ffffff;
     line-height: 24px;
     font-size: 14px; 
     font-weight: 500;
-  }
-.fonctionnement li{
-    width: 322px;
+}
+.fonctionnement div{
 height: 72px;
-/* display: flex; */
+display: flex;
 align-items: center ;
 justify-content: center;
+gap: 10px;
 border-radius: 20px;
 background-color: #F6F6F6;
 box-shadow: 0px 4px 15px 0px #00000026;
 font-size: 16px;
 font-weight: 500;
-margin-right: auto;
+margin-right: auto; 
+}
+.fonctionnement div, .fonctionnement i{
+    text-align: center;
+}
+.fonctionnement i{
+display: flex;
+align-items: center;
+margin-right: 10px;
 }
 .fa-mobile-screen-button{
     width: 13px;
     height: 20px;
+}
+.fa-mobile-screen-button,.fa-list {
     color: #7E7E7E;
-    padding-right: 10px;
 }
 .fa-store{
     height: 18px;
     color: #9356DC;
+}
+
+
+
+
+
+
+
+img{
+    width: 200px;
 }
