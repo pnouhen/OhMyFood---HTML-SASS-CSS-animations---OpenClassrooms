@@ -7,6 +7,7 @@ font-family: 'Roboto';
 /* Header */
 header{
  text-align: center;   
+ background-color: #ffffff;
 }
 header img{
 width: 200px;

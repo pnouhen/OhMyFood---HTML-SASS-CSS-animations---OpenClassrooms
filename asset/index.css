@@ -5,6 +5,14 @@ h2{
     width: 100%;
     font-size: 24px;
     font-weight: 700;
+    margin: 0;
+}
+.reservation, .restaurants{
+    background-color: #F6F6F6;
+}
+.fonctionnement, .container{
+    width: 73%;
+    margin: auto;
 }
 /* Location */
 .location {
@@ -30,7 +38,6 @@ h2{
 .reservation{
     height: 179px;
     padding: 30px 0 30px 0;
-    background-color: #F6F6F6;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,13 +66,11 @@ color: #ffffff;
 
 /* Fonctionnement */
 .fonctionnement{
-    width: 73%;
-    margin: auto;
-    height: 228px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 25px;
+    padding: 50px 0 50px 0;
 }
 .fonctionnement ul{
     width: 100%;
@@ -129,13 +134,31 @@ margin-right: 10px;
     height: 18px;
     color: #9356DC;
 }
-
-
-
-
-
-
-
-img{
-    width: 200px;
+/* Restaurants */
+.restaurants{
+    padding: 30px 0 30px 0;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+justify-content: space-between;
+gap: 50px;
+}
+.restaurants article{
+    width: 45%;
+    height: 251px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    transform: scale(1.1); 
+}
+.restaurants img{
+    width: 100%;
+    height: 60%;
+    object-fit:cover;
+}
+.firstImage{
+    object-position: 50% 75%; 
+}
+.secondImage{
+    object-position: 50% 55%; 
 }
