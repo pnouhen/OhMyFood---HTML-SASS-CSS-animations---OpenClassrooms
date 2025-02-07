@@ -25,6 +25,10 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 17px;
+  @media screen and (max-width: 768px) {
+    // Pris sur figma mais ne fonctionne pas
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  } 
   & i {
     height: 16px;
   }
@@ -43,9 +47,17 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    h1, p {
+      text-align: center;
+    }
+  }  
   & h1 {
     font-size: 40px;
     font-weight: 700;
+    @media screen and (max-width: 768px) {
+        font-size: 24px;
+      } 
   }
   & p {
     font-size: 18px;
@@ -62,6 +74,9 @@ h2 {
     font-size: 16px;
     font-weight: 500;
     color: #ffffff;
+    @media screen and (max-width: 768px) {
+        margin-top: 15px;
+      } 
   }
 }
 /* Fonctionnement */
@@ -165,14 +180,17 @@ h2 {
     overflow: hidden;
     border-radius: 15px;
     text-decoration: none;
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+   }
   }
   & a span {
     position: absolute;
-    right: 5%;
-    top: 5%;
+    left:248px;
+    top: 13px;
     width: 80px;
     height: 29px;
-    border-radius: 2px 0px 0px 0px;
+    border-radius: 2px;
     background-color: #99e2d0;
     box-shadow: 0px 2px 4px 0px #00000026;
     font-size: 14px;
@@ -202,6 +220,7 @@ h2 {
       position: absolute;
       top: 15px;
       right: 5%;
+      color: #000000;
     }
     & h3 {
       font-size: 18px;
@@ -209,7 +228,7 @@ h2 {
       margin: 0;
       color: #000000;
     }
-    & a div p {
+    & p {
       font-size: 17px;
       font-weight: 300;
       color: #000000;

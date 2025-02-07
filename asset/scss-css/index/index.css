@@ -17,6 +17,11 @@ h2 {
   align-items: center;
   gap: 17px;
 }
+@media screen and (max-width: 768px) {
+  .location {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
 .location i {
   height: 16px;
 }
@@ -36,9 +41,19 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .reservation h1, .reservation p {
+    text-align: center;
+  }
+}
 .reservation h1 {
   font-size: 40px;
   font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .reservation h1 {
+    font-size: 24px;
+  }
 }
 .reservation p {
   font-size: 18px;
@@ -55,6 +70,11 @@ h2 {
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .reservation button {
+    margin-top: 15px;
+  }
 }
 
 /* Fonctionnement */
@@ -176,13 +196,18 @@ h2 {
   border-radius: 15px;
   text-decoration: none;
 }
+@media screen and (max-width: 1024px) {
+  .restaurants a {
+    width: 100%;
+  }
+}
 .restaurants a span {
   position: absolute;
-  right: 5%;
-  top: 5%;
+  left: 248px;
+  top: 13px;
   width: 80px;
   height: 29px;
-  border-radius: 2px 0px 0px 0px;
+  border-radius: 2px;
   background-color: #99e2d0;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   font-size: 14px;
@@ -214,6 +239,7 @@ h2 {
   position: absolute;
   top: 15px;
   right: 5%;
+  color: #000000;
 }
 .restaurants a div h3 {
   font-size: 18px;
@@ -221,7 +247,7 @@ h2 {
   margin: 0;
   color: #000000;
 }
-.restaurants a div a div p {
+.restaurants a div p {
   font-size: 17px;
   font-weight: 300;
   color: #000000;
