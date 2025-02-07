@@ -4,6 +4,10 @@ $white: #f6f6f6;
 @mixin fonctionnement-restaurants__container {
   width: 73%;
   margin: auto;
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+    margin: auto;
+}
 }
 h1, h2,
 p {
@@ -71,15 +75,22 @@ h2 {
   & ul {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+   }
   }
   & li {
     position: relative;
     width: 31%;
     counter-increment: list-counter;
     list-style: none;
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+   }
   }
 
   & li::before {
@@ -130,6 +141,7 @@ h2 {
     height: 18px;
     color: #9356dc;
   }
+ 
 }
 .restaurants {
   background-color: $white;
