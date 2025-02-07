@@ -217,3 +217,40 @@ font-weight: 700;
     top: 15px;
     right: 5%;
 }
+
+// Footer
+footer{
+    height: 114px;
+background-color: #353535;
+padding: 30px 25px 30px 25px;
+display: flex;
+justify-content: end;
+align-items: end;
+gap: 30px;
+color: #FFFFFF;
+;
+}
+footer > ul {
+    width: auto;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+gap: 10px;
+padding: 0 40px 0 0;
+}
+footer li{
+    display: flex;
+    gap: 10px;
+font-size: 16px;
+font-weight: 500;
+}
+footer .fa-solid{
+    width: 16px;
+    height: 13px;
+}
+
+footer img{
+    width: 139px;
+    height: 27px;
+    filter: brightness(0) invert(1);
+}
