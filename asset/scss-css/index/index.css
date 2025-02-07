@@ -1,0 +1,189 @@
+h1, p {
+  margin: 0;
+}
+
+h2 {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.reservation, .restaurants {
+  background-color: #F6F6F6;
+}
+
+.fonctionnement, .container {
+  width: 73%;
+  margin: auto;
+}
+
+/* Location */
+.location {
+  height: 50px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+
+.location i {
+  height: 16px;
+}
+
+.location p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #353535;
+}
+
+/* Reservation */
+.reservation {
+  height: 179px;
+  padding: 30px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reservation h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.reservation p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #353535;
+}
+
+.reservation button {
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  border: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Fonctionnement */
+.fonctionnement {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+  padding: 50px 0 50px 0;
+}
+
+.fonctionnement ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.fonctionnement li {
+  position: relative;
+  width: 31%;
+  counter-increment: list-counter;
+  list-style: none;
+}
+
+.fonctionnement li::before {
+  position: absolute;
+  content: counter(list-counter) "";
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.fonctionnement div {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: auto;
+}
+
+.fonctionnement div, .fonctionnement i {
+  text-align: center;
+}
+
+.fonctionnement i {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.fa-mobile-screen-button {
+  width: 13px;
+  height: 20px;
+}
+
+.fa-mobile-screen-button, .fa-list {
+  color: #7E7E7E;
+}
+
+.fa-store {
+  height: 18px;
+  color: #9356DC;
+}
+
+/* Restaurants */
+.restaurants {
+  padding: 30px 0 30px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.restaurants article {
+  width: 45%;
+  height: 251px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  transform: scale(1.1);
+}
+
+.restaurants img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.firstImage {
+  object-position: 50% 75%;
+}
+
+.secondImage {
+  object-position: 50% 55%;
+}
+
+/*# sourceMappingURL=index.css.map */
