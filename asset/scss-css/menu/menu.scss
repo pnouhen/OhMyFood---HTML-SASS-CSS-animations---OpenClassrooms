@@ -1,0 +1,51 @@
+.fa-arrow-left{
+    position:absolute;
+    width: 30px;
+height: 30px;
+top: 33px;
+left: 17px;
+color: rgba(53, 53, 53, 1);
+}
+.imgResto{
+    position: absolute;
+    width: 100%;
+    height: 383px;
+    object-fit: cover;
+    top: 96px;
+    left: 0;
+    margin: 0;
+}
+main{
+    height: 1100px;
+}
+section{
+    position: absolute;
+    width: 1055px;
+height: 1221px;
+top: 439px;
+left: 193px;
+background-color:rgba(246, 246, 246, 1);
+;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+& h1{
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    font-family: 'Shrikhand';
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+}
+& i{
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    text-align: center;
+}
+}

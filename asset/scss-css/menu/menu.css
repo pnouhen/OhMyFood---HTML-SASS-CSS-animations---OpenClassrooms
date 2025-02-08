@@ -1,1 +1,51 @@
-/*# sourceMappingURL=menu.css.map */
+.fa-arrow-left {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 33px;
+  left: 17px;
+  color: rgb(53, 53, 53);
+}
+
+.imgResto {
+  position: absolute;
+  width: 100%;
+  height: 383px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 96px;
+  left: 0;
+  margin: 0;
+}
+
+main {
+  height: 1100px;
+}
+
+section {
+  position: absolute;
+  width: 1055px;
+  height: 1221px;
+  top: 439px;
+  left: 193px;
+  background-color: rgb(246, 246, 246);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.title h1 {
+  margin: 0;
+  text-align: center;
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+}
+.title i {
+  width: 21px;
+  height: 21px;
+}/*# sourceMappingURL=menu.css.map */
