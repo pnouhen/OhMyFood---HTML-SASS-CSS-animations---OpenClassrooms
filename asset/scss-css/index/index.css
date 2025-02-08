@@ -60,19 +60,23 @@ h2 {
   font-weight: 300;
   color: #353535;
 }
-.reservation button {
+.reservation a {
   width: 218px;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   border: 0;
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
 }
 @media screen and (max-width: 768px) {
-  .reservation button {
+  .reservation a {
     margin-top: 15px;
   }
 }
@@ -165,10 +169,10 @@ h2 {
   color: #9356dc;
 }
 
-.restaurants {
+#restaurants {
   background-color: #f6f6f6;
 }
-.restaurants__container {
+#restaurants__container {
   width: 73%;
   margin: auto;
   display: flex;
@@ -178,12 +182,12 @@ h2 {
   padding: 30px 0 30px 0;
 }
 @media screen and (max-width: 1024px) {
-  .restaurants__container {
+  #restaurants__container {
     width: 90%;
     margin: auto;
   }
 }
-.restaurants a {
+#restaurants a {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -197,11 +201,11 @@ h2 {
   text-decoration: none;
 }
 @media screen and (max-width: 1024px) {
-  .restaurants a {
+  #restaurants a {
     width: 100%;
   }
 }
-.restaurants a span {
+#restaurants a span {
   position: absolute;
   right: 5%;
   top: 13px;
@@ -217,7 +221,7 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-.restaurants img {
+#restaurants img {
   width: 100%;
   height: 231px;
   -o-object-fit: cover;
@@ -226,14 +230,14 @@ h2 {
   position: absolute;
   top: -25%;
 }
-.restaurants a div {
+#restaurants a div {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 0 0 20px 15px;
 }
-.restaurants a div .fa-heart {
+#restaurants a div .fa-heart {
   width: 16px;
   height: 16px;
   position: absolute;
@@ -241,13 +245,13 @@ h2 {
   right: 5%;
   color: #000000;
 }
-.restaurants a div h3 {
+#restaurants a div h3 {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
   color: #000000;
 }
-.restaurants a div p {
+#restaurants a div p {
   font-size: 17px;
   font-weight: 300;
   color: #000000;
