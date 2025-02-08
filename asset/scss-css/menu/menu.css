@@ -8,30 +8,16 @@
 }
 
 .imgResto {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 383px;
   -o-object-fit: cover;
      object-fit: cover;
-  top: 96px;
-  left: 0;
   margin: 0;
 }
 
-main {
-  height: 1100px;
-}
-
-section {
-  position: absolute;
-  width: 1055px;
-  height: 1221px;
-  top: 439px;
-  left: 193px;
-  background-color: rgb(246, 246, 246);
-}
-
 .title {
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +25,6 @@ section {
 }
 .title h1 {
   margin: 0;
-  text-align: center;
   font-family: "Shrikhand";
   font-size: 28px;
   font-style: italic;
@@ -48,4 +33,89 @@ section {
 .title i {
   width: 21px;
   height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  position: relative;
+  height: 1093px;
+}
+
+section {
+  position: absolute;
+  width: 73%;
+  top: 525px;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(246, 246, 246);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0 40px 0;
+}
+section article {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+section article h2 {
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0;
+}
+section article h2::after {
+  content: "";
+  width: 40px;
+  display: block;
+  border-bottom: 3px solid rgb(153, 226, 208);
+  padding-top: 10px;
+}
+section article .choice {
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 10px 20px 10px 20px;
+}
+section article .text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+section article h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+section article p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 15.04px;
+}
+section article span {
+  font-weight: 700;
+  font-size: 15.04px;
+}
+section button {
+  width: 186px;
+  height: 50px;
+  top: 50px;
+  border-radius: 25px;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=menu.css.map */
