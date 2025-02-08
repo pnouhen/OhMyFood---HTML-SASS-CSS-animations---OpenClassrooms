@@ -1,4 +1,4 @@
-.fa-arrow-left {
+header .fa-arrow-left {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -6,14 +6,23 @@
   left: 17px;
   color: rgb(53, 53, 53);
 }
-
-.imgResto {
+header .imgResto {
   position: relative;
   width: 100%;
   height: 383px;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0;
+}
+@media screen and (max-width: 1024px) {
+  header .imgResto {
+    height: 329px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .imgResto {
+    height: 275px;
+  }
 }
 
 .title {
@@ -23,6 +32,12 @@
   align-items: center;
   gap: 20px;
 }
+@media screen and (max-width: 768px) {
+  .title {
+    justify-content: space-between;
+    width: 91%;
+  }
+}
 .title h1 {
   margin: 0;
   font-family: "Shrikhand";
@@ -31,8 +46,7 @@
   font-weight: 400;
 }
 .title i {
-  width: 21px;
-  height: 21px;
+  font-size: 21px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,6 +55,16 @@
 main {
   position: relative;
   height: 1093px;
+}
+@media screen and (max-width: 1024px) {
+  main {
+    height: 1083px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    height: 1128px;
+  }
 }
 
 section {
@@ -59,11 +83,26 @@ section {
   gap: 40px;
   padding: 40px 0 40px 0;
 }
+@media screen and (max-width: 1024px) {
+  section {
+    width: 87%;
+  }
+}
+@media screen and (max-width: 768px) {
+  section {
+    width: 100%;
+  }
+}
 section article {
   width: 60%;
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+@media screen and (max-width: 768px) {
+  section article {
+    width: 93%;
+  }
 }
 section article h2 {
   font-weight: 300;
@@ -86,6 +125,12 @@ section article .choice {
   justify-content: space-between;
   align-items: end;
   padding: 10px 20px 10px 20px;
+}
+@media screen and (max-width: 768px) {
+  section article .choice {
+    width: 91%;
+    padding: 15px;
+  }
 }
 section article .text {
   display: flex;
