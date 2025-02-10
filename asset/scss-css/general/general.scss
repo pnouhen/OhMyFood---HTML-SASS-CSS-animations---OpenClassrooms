@@ -13,32 +13,34 @@ header {
   }
 }
 footer {
-  height: 114px;
+  height: auto;
   background-color: #353535;
-  padding: 30px 25px 30px 25px;
+  padding: 22px 25px 22px 25px;
   display: flex;
+  flex-direction: column;
   justify-content: end;
-  align-items: end;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 7px;
   color: #ffffff;
-  @media screen and (max-width: 1024px) {
-    flex-direction: column;
-    align-items: flex-start;
-height: auto;
-padding: 22px 25px 22px 25px;
-gap: 7px;
-}
+  @media screen and (min-width: 1025px) {
+    flex-direction: row;
+    align-items: end;
+    height: 114px;
+    padding: 30px 25px 30px 25px;
+    gap: 30px;
+  }
   & ul {
     width: auto;
     margin: 0;
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
-    padding: 0 40px 0 0;
-    @media screen and (max-width: 1024px) {
-        flex-direction: column;
-        padding: 0;
-        gap: 7px;
+    flex-direction: column;
+    gap: 7px;
+    padding: 0;
+    @media screen and (min-width: 1025px) {
+      flex-direction: row;
+      padding: 0 40px 0 0;      
+      gap: 10px;
     }
   }
   & li {
@@ -55,9 +57,11 @@ gap: 7px;
     width: 139px;
     height: 27px;
     filter: brightness(0) invert(1);
-    @media screen and (max-width: 1024px) {
-        order: -2;
-        margin-bottom: 9px;
+    order: -2;
+      margin-bottom: 9px;
+    @media screen and (min-width: 1025px) {
+      order: 0;
+      margin-bottom: 0;
     }
   }
 }

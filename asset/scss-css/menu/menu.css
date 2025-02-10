@@ -9,33 +9,34 @@ header .fa-arrow-left {
 header .imgResto {
   position: relative;
   width: 100%;
-  height: 383px;
+  height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 769px) {
   header .imgResto {
     height: 329px;
   }
 }
-@media screen and (max-width: 768px) {
-  header .imgResto {
-    height: 275px;
+@media screen and (min-width: 1025px) {
+  header {
+    height: 329px;
+    height: 383px;
   }
 }
 
 .title {
-  width: auto;
+  width: 91%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   .title {
-    justify-content: space-between;
-    width: 91%;
+    justify-content: center;
+    width: auto;
   }
 }
 .title h1 {
@@ -54,22 +55,22 @@ header .imgResto {
 
 main {
   position: relative;
-  height: 1093px;
+  height: 1128px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 769px) {
   main {
-    height: 1083px;
+    height: 1085px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1025px) {
   main {
-    height: 1128px;
+    height: 1093px;
   }
 }
 
 section {
   position: absolute;
-  width: 73%;
+  width: 100%;
   top: 525px;
   right: 50%;
   left: 50%;
@@ -83,25 +84,25 @@ section {
   gap: 40px;
   padding: 40px 0 40px 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 769px) {
   section {
     width: 87%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1025px) {
   section {
-    width: 100%;
+    width: 73%;
   }
 }
 section article {
-  width: 60%;
+  width: 93%;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   section article {
-    width: 93%;
+    width: 60%;
   }
 }
 section article h2 {
@@ -117,19 +118,19 @@ section article h2::after {
   padding-top: 10px;
 }
 section article .choice {
-  width: 100%;
+  width: 91%;
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: end;
-  padding: 10px 20px 10px 20px;
+  padding: 15px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   section article .choice {
-    width: 91%;
-    padding: 15px;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
   }
 }
 section article .text {
