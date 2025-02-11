@@ -1,4 +1,6 @@
-h1, h2,
+@charset "UTF-8";
+h1,
+h2,
 p {
   margin: 0;
 }
@@ -37,7 +39,8 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-.reservation h1, .reservation p {
+.reservation h1,
+.reservation p {
   text-align: center;
 }
 .reservation h1 {
@@ -69,6 +72,12 @@ h2 {
   font-weight: 500;
   color: #ffffff;
   margin-top: 15px;
+}
+.reservation a:hover {
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
+  opacity: 80%;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
 /* Fonctionnement */
@@ -176,25 +185,30 @@ h2 {
     width: 73%;
   }
 }
-#restaurants a {
+#restaurants article {
+  position: relative;
+  width: 100%;
+  height: 251px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+@media screen and (min-width: 769px) {
+  #restaurants article {
+    width: 45%;
+  }
+}
+#restaurants article a {
+  width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: end;
   gap: 30px;
-  width: 100%;
-  height: 251px;
-  background-color: #ffffff;
-  overflow: hidden;
-  border-radius: 15px;
   text-decoration: none;
 }
-@media screen and (min-width: 1025px) {
-  #restaurants a {
-    width: 45%;
-  }
-}
-#restaurants a span {
+#restaurants article a span {
   position: absolute;
   right: 5%;
   top: 13px;
@@ -210,38 +224,67 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-#restaurants img {
+#restaurants article a img {
   width: 100%;
   height: 231px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 15px 15px 0 0;
   position: absolute;
   top: -25%;
+  left: 0;
 }
-#restaurants a div {
+#restaurants article a div {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 0 0 20px 15px;
 }
-#restaurants a div .fa-heart {
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: 15px;
-  right: 5%;
-  color: #000000;
-}
-#restaurants a div h3 {
+#restaurants article a div h3 {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
   color: #000000;
 }
-#restaurants a div p {
+#restaurants article a div p {
   font-size: 17px;
   font-weight: 300;
   color: #000000;
+}
+#restaurants label {
+  display: block;
+  position: absolute;
+  top: 78%;
+  left: 87%;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  /* Cacher la case à cocher */
+  /* Quand la case est cochée, changer la couleur du cœur plein */
+}
+#restaurants label i {
+  font-size: 21px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (min-width: 769px) {
+  #restaurants label i {
+    left: 6px;
+  }
+}
+#restaurants label input[type=checkbox] {
+  display: none;
+}
+#restaurants label .fa-solid {
+  color: transparent;
+  transition: color 0.3s ease;
+}
+#restaurants label input[type=checkbox]:checked + i.fa-regular {
+  color: transparent; /* Rendre l'icône vide transparente */
+}
+#restaurants label input[type=checkbox]:checked + i.fa-regular + i.fa-solid {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }/*# sourceMappingURL=index.css.map */
