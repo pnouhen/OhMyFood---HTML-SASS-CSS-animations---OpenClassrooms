@@ -8,6 +8,20 @@ $white: #f6f6f6;
     width: 73%;
   }
 }
+// Keyframes
+@keyframes fillText {
+  0% {
+      background: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+  }
+  100% {
+      background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+      -webkit-background-clip: text;
+      background-clip: text;
+  }
+}
+// General
 h1,
 h2,
 p {
@@ -235,50 +249,41 @@ h2 {
       }
     }
   }
-   & label {
-  display: block;
-  position: absolute;
-  top: 78%;
-  left: 87%;
-  width: 21px;
-  height: 21px;
-  cursor: pointer;
-
-  & i {
-    font-size: 21px;
+  & label {
+    display: block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 78%;
+    left: 87%;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+  
+    & i {
+      font-size: 21px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+      @media screen and (min-width: 769px) {
+        left: 6px;
+      }
+    }
+  
+    & input[type="checkbox"] {
+      display: none;
+    }
+    & .fa-solid {
+      color: transparent;
+      transition: background 400ms ease-in-out;
+    }
+    // Checkbox activation
+    & input[type="checkbox"]:checked + .fa-regular {
+      opacity: 0;
+      transition: opacity 400ms ease-in-out;
+    }  
 
-    @media screen and (min-width: 769px) {
-      left: 6px;
-      &:hover {
-        transform: scale(1.1);
-        transition: transform 0.2s ease;
+    & input[type="checkbox"]:checked + .fa-regular + .fa-solid {
+      animation: fillText 800ms forwards;
     }
   }
-
-  /* Cacher la case à cocher */
-  & input[type="checkbox"] {
-    display: none;
-  }
-
-  & .fa-solid {
-    color: transparent; 
-    transition: color 0.3s ease;
-  }
-
-  /* Quand la case est cochée, changer la couleur du cœur plein */
-  & input[type="checkbox"]:checked + i.fa-regular {
-    color: transparent; /* Rendre l'icône vide transparente */
-  }
-
-  & input[type="checkbox"]:checked + i.fa-regular + i.fa-solid {
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-}
-
-     
 }
