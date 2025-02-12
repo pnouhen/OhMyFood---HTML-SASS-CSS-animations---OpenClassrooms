@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes fillText {
   0% {
     background: transparent;
@@ -5,7 +6,7 @@
     background-clip: text;
   }
   100% {
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
     -webkit-background-clip: text;
     background-clip: text;
   }
@@ -20,6 +21,122 @@ h2 {
   width: 100%;
   font-size: 24px;
   font-weight: 700;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  animation: loaderAnimation 3s forwards;
+}
+@keyframes loaderAnimation {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loader___container {
+  position: relative;
+  width: 50vw;
+  height: 50vw;
+}
+@media screen and (min-width: 769px) {
+  .loader___container {
+    width: 50vh;
+    height: 50vh;
+  }
+}
+.loader___container .cercle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: boxShadowAnimation 3s linear alternate, rotation 3s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+@keyframes boxShadowAnimation {
+  0% {
+    box-shadow: 0 -5px 0 0 #9356dc, 0 10px 0 0 #ff79da;
+  }
+  50% {
+    box-shadow: 0 -20px 15px 0 #9356dc, 0 30px 15px 0 #ff79da;
+  }
+  100% {
+    box-shadow: 0 -5px 0 0 #9356dc, 0 10px 0 0 #ff79da;
+  }
+}
+.loader___container i {
+  font-size: 5vw;
+  opacity: 0;
+}
+.loader___container .fa-solid {
+  animation: appear 500ms forwards;
+}
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+.loader___container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0; /* L'image est invisible au début */
+  animation: appear 500ms forwards;
+  animation-delay: 500ms; /* Ajout d'un délai pour que l'image apparaisse après les icônes */
+}
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+.loader___container .fa-location-dot {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  animation-delay: 1000ms;
+}
+.loader___container .fa-mobile-screen-button {
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  transform: translate(-50%, -50%);
+  animation-delay: 1500ms;
+}
+.loader___container .fa-list {
+  position: absolute;
+  bottom: 10%;
+  right: 12.5%;
+  transform: translate(-50%, -50%);
+  animation-delay: 2000ms;
+}
+.loader___container .fa-store {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  animation-delay: 2500ms;
 }
 
 .location {
