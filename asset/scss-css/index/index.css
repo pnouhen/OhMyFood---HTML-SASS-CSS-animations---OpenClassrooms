@@ -85,6 +85,11 @@ h2 {
   font-size: 5vw;
   opacity: 0;
 }
+@media screen and (min-width: 769px) {
+  .loader___container i {
+    font-size: 5vh;
+  }
+}
 .loader___container .fa-solid {
   animation: appear 500ms forwards;
 }

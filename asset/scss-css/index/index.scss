@@ -42,13 +42,13 @@ h2 {
   background-color: rgba(255, 255, 255);
   animation: loaderAnimation 3s forwards;
   @keyframes loaderAnimation {
-    0%{
+    0% {
       opacity: 1;
     }
-    99%{
+    99% {
       opacity: 1;
     }
-    100%{
+    100% {
       opacity: 0;
     }
   }
@@ -58,7 +58,7 @@ h2 {
     height: 50vw;
     @media screen and (min-width: 769px) {
       width: 50vh;
-    height: 50vh;
+      height: 50vh;
     }
     & .cercle {
       width: 100%;
@@ -89,9 +89,11 @@ h2 {
     & i {
       font-size: 5vw;
       opacity: 0;
-  
+      @media screen and (min-width: 769px) {
+        font-size: 5vh;
+      }
     }
-    & .fa-solid{
+    & .fa-solid {
       animation: appear 500ms forwards;
       @keyframes appear {
         to {
@@ -100,21 +102,21 @@ h2 {
       }
     }
     & img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  object-fit: contain;
-  opacity: 0; /* L'image est invisible au début */
-  animation: appear 500ms forwards;
-  animation-delay: 500ms; /* Ajout d'un délai pour que l'image apparaisse après les icônes */
-}
-@keyframes appear {
-  to {
-    opacity: 1;
-  }
-} 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      object-fit: contain;
+      opacity: 0; /* L'image est invisible au début */
+      animation: appear 500ms forwards;
+      animation-delay: 500ms; /* Ajout d'un délai pour que l'image apparaisse après les icônes */
+    }
+    @keyframes appear {
+      to {
+        opacity: 1;
+      }
+    }
     & .fa-location-dot {
       position: absolute;
       top: 20%;
@@ -131,7 +133,7 @@ h2 {
     }
     & .fa-list {
       position: absolute;
-      bottom: 10%;      
+      bottom: 10%;
       right: 12.5%;
       transform: translate(-50%, -50%);
       animation-delay: 2000ms;
