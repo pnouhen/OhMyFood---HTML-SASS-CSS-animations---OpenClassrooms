@@ -99,6 +99,8 @@ section article {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  opacity: 0;
+  animation: appear 500ms forwards;
 }
 @media screen and (min-width: 769px) {
   section article {
@@ -151,6 +153,23 @@ section article p {
 section article span {
   font-weight: 700;
   font-size: 15.04px;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+section #entrees {
+  animation-delay: 500ms;
+}
+section #plats {
+  animation-delay: 1000ms;
+}
+section #desserts {
+  animation-delay: 1500ms;
 }
 section button {
   width: 186px;

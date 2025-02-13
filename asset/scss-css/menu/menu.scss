@@ -9,7 +9,7 @@ header {
   }
   & .imgResto {
     position: relative;
-    width: 100%;    
+    width: 100%;
     height: 275px;
     object-fit: cover;
     margin: 0;
@@ -17,21 +17,21 @@ header {
       height: 329px;
     }
   }
-    @media screen and (min-width: 1025px) {
-      height: 329px;
-      height: 383px;
-    } 
+  @media screen and (min-width: 1025px) {
+    height: 329px;
+    height: 383px;
+  }
 }
 .title {
   width: 91%;
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   @media screen and (min-width: 769px) {
     justify-content: center;
     width: auto;
-      }
+  }
   & h1 {
     margin: 0;
     font-family: "Shrikhand";
@@ -45,7 +45,6 @@ header {
     justify-content: center;
     align-items: center;
   }
-  
 }
 main {
   position: relative;
@@ -53,7 +52,7 @@ main {
   @media screen and (min-width: 769px) {
     height: 1085px;
   }
-    @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     height: 1093px;
   }
 }
@@ -130,7 +129,26 @@ section {
     & span {
       font-weight: 700;
       font-size: 15.04px;
+    }  
+    opacity: 0;
+    animation: appear 500ms forwards;
+    @keyframes appear {
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
     }
+  }
+  & #entrees {
+    animation-delay: 500ms;
+  }
+  & #plats {
+    animation-delay: 1000ms;
+  }
+  & #desserts {
+    animation-delay: 1500ms;
   }
   & button {
     width: 186px;

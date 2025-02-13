@@ -8,19 +8,6 @@ $white: #f6f6f6;
     width: 73%;
   }
 }
-// Keyframes
-@keyframes fillText {
-  0% {
-    background: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  100% {
-    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-}
 h1,
 h2,
 p {
@@ -110,9 +97,9 @@ h2 {
       transform: translate(-50%, -50%);
       width: 90%;
       object-fit: contain;
-      opacity: 0; /* L'image est invisible au début */
+      opacity: 0;
       animation: appear 500ms forwards;
-      animation-delay: 500ms; /* Ajout d'un délai pour que l'image apparaisse après les icônes */
+      animation-delay: 500ms;
     }
     @keyframes appear {
       to {
@@ -149,7 +136,6 @@ h2 {
     }
   }
 }
-
 .location {
   height: 50px;
   background-color: #eaeaea;
@@ -402,6 +388,18 @@ h2 {
 
     & input[type="checkbox"]:checked + .fa-regular + .fa-solid {
       animation: fillText 800ms forwards;
+    }
+    @keyframes fillText {
+      0% {
+        background: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      100% {
+        background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
     }
   }
 }
