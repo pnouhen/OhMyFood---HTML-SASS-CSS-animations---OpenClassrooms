@@ -57,6 +57,10 @@ footer li {
   font-size: 16px;
   font-weight: 500;
 }
+footer li a {
+  text-decoration: none;
+  color: inherit;
+}
 footer .fa-solid {
   width: 16px;
   height: 13px;

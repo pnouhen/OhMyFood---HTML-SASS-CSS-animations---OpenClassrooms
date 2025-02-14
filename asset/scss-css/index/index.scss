@@ -26,12 +26,9 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255);
-  animation: loaderAnimation 3s forwards;
+  background-color: rgb(153, 226, 208, 1);
+  // animation: loaderAnimation 3s forwards;
   @keyframes loaderAnimation {
-    0% {
-      opacity: 1;
-    }
     99% {
       opacity: 1;
       z-index: 1;
@@ -53,7 +50,7 @@ h2 {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      animation: boxShadowAnimation 3s linear alternate,
+      animation: boxShadowAnimation 1s linear infinite,
         rotation 3s linear infinite;
     }
     @keyframes rotation {
@@ -66,13 +63,13 @@ h2 {
     }
     @keyframes boxShadowAnimation {
       0% {
-        box-shadow: 0 -5px 0 0 #9356dc, 0 10px 0 0 #ff79da;
+        box-shadow: 0 -10px 0 0 #9356dc, 0 10px 0 0 #ff79da;
       }
       50% {
-        box-shadow: 0 -20px 15px 0 #9356dc, 0 30px 15px 0 #ff79da;
+        box-shadow: 0 -20px 0 0 #9356dc, 0 20px 0 0 #ff79da;
       }
       100% {
-        box-shadow: 0 -5px 0 0 #9356dc, 0 10px 0 0 #ff79da;
+        box-shadow: 0 -10px 0 0 #9356dc, 0 10px 0 0 #ff79da;
       }
     }
     & i {
@@ -108,28 +105,28 @@ h2 {
     }
     & .fa-location-dot {
       position: absolute;
-      top: 20%;
+      top: 30%;
       left: 20%;
       transform: translate(-50%, -50%);
       animation-delay: 1000ms;
     }
     & .fa-mobile-screen-button {
       position: absolute;
-      top: 20%;
+      top: 30%;
       right: 15%;
       transform: translate(-50%, -50%);
       animation-delay: 1500ms;
     }
     & .fa-list {
       position: absolute;
-      bottom: 10%;
+      bottom: 20%;
       right: 12.5%;
       transform: translate(-50%, -50%);
       animation-delay: 2000ms;
     }
     & .fa-store {
       position: absolute;
-      bottom: 10%;
+      bottom: 20%;
       left: 20%;
       transform: translate(-50%, -50%);
       animation-delay: 2500ms;
