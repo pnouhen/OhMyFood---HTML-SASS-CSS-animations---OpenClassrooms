@@ -19,6 +19,7 @@ h2 {
   justify-content: center;
   align-items: center;
   background-color: rgb(153, 226, 208);
+  animation: loaderAnimation 3s forwards;
 }
 @keyframes loaderAnimation {
   99% {
@@ -370,48 +371,12 @@ h2 {
   color: #000000;
 }
 #restaurants label {
-  display: block;
   position: absolute;
   top: 78%;
   left: 87%;
-  width: 21px;
-  height: 21px;
-  cursor: pointer;
-}
-#restaurants label i {
-  font-size: 21px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 @media screen and (min-width: 769px) {
   #restaurants label i {
     left: 6px;
-  }
-}
-#restaurants label input[type=checkbox] {
-  display: none;
-}
-#restaurants label .fa-solid {
-  color: transparent;
-  transition: background 400ms ease-in-out;
-}
-#restaurants label input[type=checkbox]:checked + .fa-regular {
-  opacity: 0;
-  transition: opacity 400ms ease-in-out;
-}
-#restaurants label input[type=checkbox]:checked + .fa-regular + .fa-solid {
-  animation: fillText 800ms forwards;
-}
-@keyframes fillText {
-  0% {
-    background: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  100% {
-    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-    -webkit-background-clip: text;
-    background-clip: text;
   }
 }/*# sourceMappingURL=index.css.map */

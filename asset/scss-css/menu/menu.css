@@ -27,6 +27,7 @@ header .imgResto {
 }
 
 .title {
+  position: relative;
   width: 91%;
   display: flex;
   justify-content: space-between;
@@ -46,11 +47,8 @@ header .imgResto {
   font-style: italic;
   font-weight: 400;
 }
-.title i {
-  font-size: 21px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.title label {
+  position: relative;
 }
 
 main {

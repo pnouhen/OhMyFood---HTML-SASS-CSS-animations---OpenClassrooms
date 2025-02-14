@@ -23,6 +23,7 @@ header {
   }
 }
 .title {
+  position: relative;
   width: 91%;
   display: flex;
   justify-content: space-between;
@@ -39,11 +40,8 @@ header {
     font-style: italic;
     font-weight: 400;
   }
-  & i {
-    font-size: 21px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  & label {
+    position: relative;
   }
 }
 main {
@@ -129,14 +127,14 @@ section {
     & span {
       font-weight: 700;
       font-size: 15.04px;
-    }  
+    }
     opacity: 0;
     animation: appear 500ms forwards;
     @keyframes appear {
-      0%{
+      0% {
         opacity: 0;
       }
-      100%{
+      100% {
         opacity: 1;
       }
     }
