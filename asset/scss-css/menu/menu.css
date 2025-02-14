@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header .fa-arrow-left {
   position: absolute;
   width: 30px;
@@ -26,7 +27,7 @@ header .imgResto {
   }
 }
 
-.title {
+.restaurant {
   position: relative;
   width: 91%;
   display: flex;
@@ -35,19 +36,19 @@ header .imgResto {
   gap: 20px;
 }
 @media screen and (min-width: 769px) {
-  .title {
+  .restaurant {
     justify-content: center;
     width: auto;
   }
 }
-.title h1 {
+.restaurant h1 {
   margin: 0;
   font-family: "Shrikhand";
   font-size: 28px;
   font-style: italic;
   font-weight: 400;
 }
-.title label {
+.restaurant .heart {
   position: relative;
 }
 
@@ -98,7 +99,15 @@ section article {
   flex-direction: column;
   gap: 12px;
   opacity: 0;
-  animation: appear 500ms forwards;
+  animation: appear 300ms forwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media screen and (min-width: 769px) {
   section article {
@@ -118,56 +127,138 @@ section article h2::after {
   padding-top: 10px;
 }
 section article .choice {
-  width: 91%;
+  height: 69px;
+  display: flex;
+  justify-content: space-between;
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  padding: 15px;
+  position: relative;
 }
-@media screen and (min-width: 769px) {
-  section article .choice {
-    width: 100%;
-    padding: 10px 20px 10px 20px;
-  }
+section article .choice input[type=checkbox] {
+  display: none;
 }
-section article .text {
+section article .choice .info-group {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
+  width: 100%;
+  padding: 10px 20px;
+  overflow: hidden;
 }
-section article h3 {
+section article .choice .info-group .title {
   margin: 0;
   font-weight: 500;
   font-size: 18px;
 }
-section article p {
+section article .choice .info-group .description {
   margin: 0;
   font-weight: 300;
   font-size: 15.04px;
 }
-section article span {
+section article .choice .info-group .title, section article .choice .info-group .description {
+  max-width: 80%;
+  white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ajoute les points de suspension si le texte dépasse */
+}
+section article .choice .info-group .price {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
   font-weight: 700;
   font-size: 15.04px;
 }
-@keyframes appear {
-  0% {
+section article .choice .check {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: rgb(153, 226, 208);
+  opacity: 0;
+}
+section article .choice .check .fa-check {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  font-size: 15px;
+  color: rgb(153, 226, 208);
+}
+section article .choice input[type=checkbox]:checked + .info-group + .check {
+  animation: activeCheck 400ms forwards;
+}
+@keyframes activeCheck {
+  from {
     opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 59px;
+  }
+}
+section article .choice input[type=checkbox]:checked + .info-group + .check i {
+  animation: activerotation 400ms linear;
+}
+@keyframes activerotation {
+  0% {
+    transform: rotate(0deg);
   }
   100% {
+    transform: rotate(-360deg);
+  }
+}
+section article .choice input[type=checkbox]:not(:checked) + .info-group + .check {
+  animation: inactiveCheck 400ms forwards;
+}
+@keyframes inactiveCheck {
+  from {
     opacity: 1;
+    width: 59px;
+  }
+  to {
+    opacity: 0;
+    width: 0;
+  }
+}
+section article .choice input[type=checkbox]:not(:checked) + .info-group + .check i {
+  animation: inactiverotation 400ms linear;
+}
+@keyframes inactiverotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (min-width: 769px) {
+  section article .choice .choice:hover {
+    background-color: #9356dc;
+  }
+  section article .choice input {
+    position: absolute;
+    z-index: -1;
   }
 }
 section #entrees {
-  animation-delay: 500ms;
+  animation-delay: 300ms;
 }
 section #plats {
-  animation-delay: 1000ms;
+  animation-delay: 600ms;
 }
 section #desserts {
-  animation-delay: 1500ms;
+  animation-delay: 900ms;
 }
 section button {
   width: 186px;

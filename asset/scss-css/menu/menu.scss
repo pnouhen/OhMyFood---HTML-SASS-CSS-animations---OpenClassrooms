@@ -22,7 +22,7 @@ header {
     height: 383px;
   }
 }
-.title {
+.restaurant {
   position: relative;
   width: 91%;
   display: flex;
@@ -40,7 +40,7 @@ header {
     font-style: italic;
     font-weight: 400;
   }
-  & label {
+  & .heart {
     position: relative;
   }
 }
@@ -80,6 +80,16 @@ section {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    opacity: 0;
+    animation: appear 300ms forwards;
+    @keyframes appear {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
     @media screen and (min-width: 769px) {
       width: 60%;
     }
@@ -96,57 +106,133 @@ section {
       padding-top: 10px;
     }
     & .choice {
-      width: 91%;
+      height: 69px;
+      display: flex;
+      justify-content: space-between;
       border-radius: 15px;
       background-color: rgba(255, 255, 255, 1);
       box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      padding: 15px;
-      @media screen and (min-width: 769px) {
+      position: relative;
+      & input[type="checkbox"] {
+        display: none;
+      }
+      & .info-group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
         width: 100%;
-        padding: 10px 20px 10px 20px;
+        padding: 10px 20px;
+        overflow: hidden;
+        & .title {
+          margin: 0;
+          font-weight: 500;
+          font-size: 18px;
+        }
+        & .description {
+          margin: 0;
+          font-weight: 300;
+          font-size: 15.04px;
+        }
+        & .title,
+        .description {
+          max-width: 80%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        & .price {
+          position: absolute;
+          right: 20px;
+          bottom: 10px;
+          font-weight: 700;
+          font-size: 15.04px;
+        }
       }
-    }
-    & .text {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-    & h3 {
-      margin: 0;
-      font-weight: 500;
-      font-size: 18px;
-    }
-    & p {
-      margin: 0;
-      font-weight: 300;
-      font-size: 15.04px;
-    }
-    & span {
-      font-weight: 700;
-      font-size: 15.04px;
-    }
-    opacity: 0;
-    animation: appear 500ms forwards;
-    @keyframes appear {
-      0% {
+      & .check {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0;
+        height: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: rgba(153, 226, 208, 1);
         opacity: 0;
+        & .fa-check {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 1);
+          font-size: 15px;
+          color: rgba(153, 226, 208, 1);
+        }
       }
-      100% {
-        opacity: 1;
+      // Activation
+      & input[type="checkbox"]:checked + .info-group + .check {
+        animation: activeCheck 400ms forwards;
+      }
+      @keyframes activeCheck {
+        from {
+          opacity: 0;
+          width: 0;
+        }
+        to {
+          opacity: 1;
+          width: 59px;
+        }
+      }
+      & input[type="checkbox"]:checked + .info-group + .check i {
+        animation: activerotation 400ms linear;
+      }
+      @keyframes activerotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+      // Inactivation
+      & input[type="checkbox"]:not(:checked) + .info-group + .check {
+        animation: inactiveCheck 400ms forwards;
+      }
+      @keyframes inactiveCheck {
+        from {
+          opacity: 1;
+          width: 59px;
+        }
+        to {
+          opacity: 0;
+          width: 0;
+        }
+      }
+      & input[type="checkbox"]:not(:checked) + .info-group + .check i {
+        animation: inactiverotation 400ms linear;
+      }
+      @keyframes inactiverotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
     }
   }
   & #entrees {
-    animation-delay: 500ms;
+    animation-delay: 300ms;
   }
   & #plats {
-    animation-delay: 1000ms;
+    animation-delay: 600ms;
   }
   & #desserts {
-    animation-delay: 1500ms;
+    animation-delay: 900ms;
   }
   & button {
     width: 186px;
@@ -162,4 +248,3 @@ section {
     text-align: center;
     color: rgba(255, 255, 255, 1);
   }
-}

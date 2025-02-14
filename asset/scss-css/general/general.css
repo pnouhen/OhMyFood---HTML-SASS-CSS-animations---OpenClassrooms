@@ -15,30 +15,30 @@ header img {
   margin: 30px 0 30px 0;
 }
 
-label {
+.heart {
   display: block;
   width: 21px;
   height: 21px;
   cursor: pointer;
 }
-label i {
+.heart i {
   position: absolute;
   font-size: 21px;
   top: 0;
   left: 0;
 }
-label input[type=checkbox] {
+.heart input[type=checkbox] {
   display: none;
 }
-label .fa-solid {
+.heart .fa-solid {
   color: transparent;
   transition: background 400ms ease-in-out;
 }
-label input[type=checkbox]:checked + .fa-regular {
+.heart input[type=checkbox]:checked + .fa-regular {
   opacity: 0;
   transition: opacity 400ms ease-in-out;
 }
-label input[type=checkbox]:checked + .fa-regular + .fa-solid {
+.heart input[type=checkbox]:checked + .fa-regular + .fa-solid {
   animation: fillText 800ms forwards;
 }
 @keyframes fillText {

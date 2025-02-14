@@ -9,9 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
@@ -22,98 +25,117 @@
   </head>
   <body>
     <header>
-      <a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a>        
+      <a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a>
       <img src="./asset/images/logo/ohmyfood.png" alt="Logo website" />
       <img
         src="./asset/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-        alt="Picture of La palette du goût" class="imgResto"
-      /> 
+        alt="Picture of La palette du goût"
+        class="imgResto"
+      />
     </header>
-    <main>     
+    <main>
       <section>
-        <div class="title">
+        <div class="restaurant">
           <h1>La palette du goût</h1>
-          <label>
-            <input type="checkbox" class="heart-checkbox" />
+          <label class="heart">
+            <input type="checkbox"/>
             <i class="fa-regular fa-heart"></i>
             <i class="fa-solid fa-heart"></i>
           </label>
         </div>
-        <!-- Entrees -->
+        <!-- Entrées -->
         <article id="entrees">
           <h2>Entrées</h2>
-          <div class="choice">
-            <div class="text">
-              <h3>Fricassée d'escargots</h3>
-              <p>Au piment d'Espelette</p>
-            </div>
-            <span>25€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Foie gras de canard mi-cuit</h3>
-              <p>Et ses copeaux de truffe noire</p>
-            </div>
-            <span>35€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Œuf au plat</h3>
-              <p>Assaisonné à la truffe sur lit de caviar</p>
-            </div>
-            <span>20€</span>
-          </div>
-        </article>        
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Fricassée d'escargots</span>
+              <span class="description">Au piment d'Espelette</span>
+              <span class="price">25€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Foie gras de canard mi-cuit</span>
+              <span class="description">Et ses copeaux de truffe noire</span>
+              <span class="price">35€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Œuf au plat</span>
+              <span class="description">Assaisonné à la truffe sur lit de caviar</span>
+              <span class="price">20€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+        </article>
         <!-- Plats -->
         <article id="plats">
           <h2>Plats</h2>
-          <div class="choice">
-            <div class="text">
-              <h3>Filet de bœuf aux herbes</h3>
-              <p>Accompagné de sa ribambelle de légumes</p>
-            </div>
-            <span>40€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Parmentier de queue de bœuf</h3>
-              <p>À la truffe noire sur sa purée de panais</p>
-            </div>
-            <span>35€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Filet de turbot</h3>
-              <p>Aux agrumes</p>
-            </div>
-            <span>44€</span>
-          </div>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Filet de bœuf aux herbes</span>
+              <span class="description">Accompagné de sa ribambelle de légumes</span>
+              <span class="price">40€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Parmentier de queue de bœuf</span>
+              <span class="description">À la truffe noire sur sa purée de panais</span>
+              <span class="price">35€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Filet de turbot</span>
+              <span class="description">Aux agrumes</span>
+              <span class="price">44€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
         </article>
         <!-- Desserts -->
         <article id="desserts">
           <h2>Desserts</h2>
-          <div class="choice">
-            <div class="text">
-              <h3>Paris-Brest</h3>
-              <p>Revisité</p>
-            </div>
-            <span>18€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Macaron au chocolat d'exception</h3>
-              <p>Et glace à la vanille de Madagascar</p>
-            </div>
-            <span>22€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Mousse au chocolat</h3>
-              <p>Au piment d'Espelette et à la truffe noire</p>
-            </div>
-            <span>23€</span>
-          </div>
-        </article>        
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Paris-Brest</span>
+              <span class="description">Revisité</span>
+              <span class="price">18€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Macaron au chocolat d'exception</span>
+              <span class="description">Et glace à la vanille de Madagascar</span>
+              <span class="price">22€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Mousse au chocolat</span>
+              <span class="description">Au piment d'Espelette et à la truffe noire</span>
+              <span class="price">23€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+        </article>
         <button>Commander</button>
       </section>
     </main>
@@ -124,7 +146,9 @@
       </ul>
       <ul>
         <li>Mentions légales</li>
-        <li><a href="mailto:example1@exemple.com;exemple2@exemple.com">Contact</a></li>
+        <li>
+          <a href="mailto:example1@exemple.com;exemple2@exemple.com">Contact</a>
+        </li>
       </ul>
       <img src="./asset/images/logo/ohmyfood.png" alt="Logo website" />
     </footer>
