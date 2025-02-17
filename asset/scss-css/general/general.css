@@ -41,6 +41,15 @@ header img {
 .heart input[type=checkbox]:checked + .fa-regular + .fa-solid {
   animation: fillText 800ms forwards;
 }
+@media screen and (min-width: 769px) {
+  .heart input[type=checkbox]:hover + .fa-regular {
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+  }
+  .heart input[type=checkbox]:hover + .fa-regular + .fa-solid {
+    animation: fillText 800ms forwards;
+  }
+}
 @keyframes fillText {
   0% {
     background: transparent;

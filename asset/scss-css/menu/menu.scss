@@ -28,9 +28,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  padding-right: 15px;
   @media screen and (min-width: 769px) {
     justify-content: center;
+    gap: 20px;
+    padding-right: 0;
     width: auto;
   }
   & h1 {
@@ -223,6 +225,24 @@ section {
           transform: rotate(360deg);
         }
       }
+      // Media Query for hover
+      @media screen and (min-width: 769px) {
+        /* Activation hover */
+        & input[type="checkbox"]:hover + .info-group + .check {
+          animation: activeCheck 400ms forwards;
+        }
+        & input[type="checkbox"]:hover + .info-group + .check i {
+          animation: activerotation 400ms linear;
+        }
+        /* Inactivation hover */
+        & input[type="checkbox"]:not(:hover) + .info-group + .check {
+          animation: inactiveCheck 400ms forwards;
+        }
+
+        & input[type="checkbox"]:not(:hover) + .info-group + .check i {
+          animation: inactiverotation 400ms linear;
+        }
+      }
     }
   }
   & #entrees {
@@ -248,3 +268,4 @@ section {
     text-align: center;
     color: rgba(255, 255, 255, 1);
   }
+}

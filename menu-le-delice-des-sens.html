@@ -10,102 +10,128 @@
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./asset/scss-css/general/general.css" />
     <link rel="stylesheet" href="./asset/scss-css/menu/menu.css" />
-    <title>Le delice des sens - Menu - Ohmyfood</title>
+    <title>Le Délice des Sens - Menu - Ohmyfood</title>
   </head>
   <body>
     <header>
-      <a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a>        
+      <a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a>
       <img src="./asset/images/logo/ohmyfood.png" alt="Logo website" />
-      <img src="./asset/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le Délice des Sens" class="imgResto" />
+      <img
+        src="./asset/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+        alt="Le Délice des Sens"
+        class="imgResto"
+      />
     </header>
-    <main>     
+    <main>
       <section>
-        <div class="title">
+        <div class="restaurant">
           <h1>Le Délice des Sens</h1>
-          <i class="fa-regular fa-heart"></i>
+          <label class="heart">
+            <input type="checkbox"/>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </label>
         </div>
-        <!-- Entrees -->
+        <!-- Entrées -->
         <article id="entrees">
           <h2>Entrées</h2>
-          <div class="choice">
-            <div class="text">
-              <h3>Tartare de thon</h3>
-              <p>Assaisonné au yuzu</p>
-            </div>
-            <span>25€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Bouchée de homard croustillant</h3>
-              <p>Et sa farandole de petits légumes</p>
-            </div>
-            <span>35€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Velouté de cèpes</h3>
-              <p>Aux truffes</p>
-            </div>
-            <span>20€</span>
-          </div>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Tartare de thon</span>
+              <span class="description">Assaisonné au yuzu</span>
+              <span class="price">25€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Bouchée de homard croustillant</span>
+              <span class="description">Et sa farandole de petits légumes</span>
+              <span class="price">35€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Velouté de cèpes</span>
+              <span class="description">Aux truffes</span>
+              <span class="price">20€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
         </article>
         <!-- Plats -->
         <article id="plats">
           <h2>Plats</h2>
-          <div class="choice">
-            <div class="text">
-              <h3>Poulet rôti aux herbes de Provence</h3>
-              <p>Et sa crème de truffe</p>
-            </div>
-            <span>40€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Langouste rôtie</h3>
-              <p>Et ses légumes de saison</p>
-            </div>
-            <span>35€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Côte de bœuf Angus</h3>
-              <p>Et sa purée de panais</p>
-            </div>
-            <span>44€</span>
-          </div>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Poulet rôti aux herbes de Provence</span>
+              <span class="description">Et sa crème de truffe</span>
+              <span class="price">40€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Langouste rôtie</span>
+              <span class="description">Et ses légumes de saison</span>
+              <span class="price">35€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Côte de bœuf Angus</span>
+              <span class="description">Et sa purée de panais</span>
+              <span class="price">44€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
         </article>
         <!-- Desserts -->
         <article id="desserts">
           <h2>Desserts</h2>
-          <div class="choice">
-            <div class="text">
-              <h3>Farandole de desserts</h3>
-              <p>Du chef</p>
-            </div>
-            <span>18€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Crème brulée</h3>
-              <p>Revisitée</p>
-            </div>
-            <span>22€</span>
-          </div>
-          <div class="choice">
-            <div class="text">
-              <h3>Tiramisu</h3>
-              <p>À la noisette</p>
-            </div>
-            <span>23€</span>
-          </div>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Farandole de desserts</span>
+              <span class="description">Du chef</span>
+              <span class="price">18€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Crème brulée</span>
+              <span class="description">Revisitée</span>
+              <span class="price">22€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" class="heart-checkbox" />
+            <span class="info-group">
+              <span class="title">Tiramisu</span>
+              <span class="description">À la noisette</span>
+              <span class="price">23€</span>
+            </span>
+            <span class="check"><i class="fa-solid fa-check"></i></span>
+          </label>
         </article>
         <button>Commander</button>
       </section>

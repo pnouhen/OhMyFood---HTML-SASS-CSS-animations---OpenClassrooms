@@ -32,7 +32,7 @@ header {
     color: transparent;
     transition: background 400ms ease-in-out;
   }
-  // Checkbox activation
+  // Checkbox activation checked
   & input[type="checkbox"]:checked + .fa-regular {
     opacity: 0;
     transition: opacity 400ms ease-in-out;
@@ -40,6 +40,16 @@ header {
 
   & input[type="checkbox"]:checked + .fa-regular + .fa-solid {
     animation: fillText 800ms forwards;
+  }
+   @media screen and (min-width: 769px) {
+    & input[type="checkbox"]:hover + .fa-regular {
+      opacity: 0;
+      transition: opacity 400ms ease-in-out;
+    }
+  
+    & input[type="checkbox"]:hover + .fa-regular + .fa-solid {
+      animation: fillText 800ms forwards;
+    }
   }
   @keyframes fillText {
     0% {
