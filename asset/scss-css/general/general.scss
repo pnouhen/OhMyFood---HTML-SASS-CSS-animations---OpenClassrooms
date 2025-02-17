@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   font-family: "Roboto";
 }
+// Hearder
 header {
   text-align: center;
   background-color: #ffffff;
@@ -13,7 +14,7 @@ header {
     margin: 30px 0 30px 0;
   }
 }
-// Animation heart
+// Heart animation
 .heart {
   display: block;
   width: 21px;
@@ -64,6 +65,7 @@ header {
     }
   }
 }
+// Footer
 footer {
   height: auto;
   background-color: #353535;

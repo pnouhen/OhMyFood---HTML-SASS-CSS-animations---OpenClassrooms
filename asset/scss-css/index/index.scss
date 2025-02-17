@@ -18,6 +18,7 @@ h2 {
   font-size: 24px;
   font-weight: 700;
 }
+// Loader
 .loader {
   position: fixed;
   width: 100%;
@@ -53,14 +54,6 @@ h2 {
       animation: boxShadowAnimation 1s linear infinite,
         rotation 3s linear infinite;
     }
-    @keyframes rotation {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(1080deg);
-      }
-    }
     @keyframes boxShadowAnimation {
       0% {
         box-shadow: 0 -10px 0 0 #9356dc, 0 10px 0 0 #ff79da;
@@ -70,6 +63,14 @@ h2 {
       }
       100% {
         box-shadow: 0 -10px 0 0 #9356dc, 0 10px 0 0 #ff79da;
+      }
+    }
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(1080deg);
       }
     }
     & i {
@@ -133,6 +134,7 @@ h2 {
     }
   }
 }
+// Location
 .location {
   height: 50px;
   background-color: #eaeaea;
@@ -151,6 +153,7 @@ h2 {
     color: #353535;
   }
 }
+// Reservation
 .reservation {
   height: 179px;
   padding: 30px 0 30px 0;
@@ -227,7 +230,6 @@ h2 {
       width: 31%;
     }
   }
-
   & li::before {
     position: absolute;
     content: counter(list-counter) "";
@@ -277,6 +279,7 @@ h2 {
     color: #9356dc;
   }
 }
+// Restaurants
 #restaurants {
   background-color: $white;
   &__container {

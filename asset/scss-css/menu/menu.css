@@ -55,17 +55,7 @@ header .imgResto {
 
 main {
   position: relative;
-  height: 1128px;
-}
-@media screen and (min-width: 769px) {
-  main {
-    height: 1085px;
-  }
-}
-@media screen and (min-width: 1025px) {
-  main {
-    height: 1093px;
-  }
+  height: 1102px;
 }
 
 section {

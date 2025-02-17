@@ -1,3 +1,4 @@
+// Header
 header {
   & .fa-arrow-left {
     position: absolute;
@@ -22,6 +23,7 @@ header {
     height: 383px;
   }
 }
+// Restaurant
 .restaurant {
   position: relative;
   width: 91%;
@@ -46,16 +48,12 @@ header {
     position: relative;
   }
 }
+// Main
 main {
   position: relative;
-  height: 1128px;
-  @media screen and (min-width: 769px) {
-    height: 1085px;
-  }
-  @media screen and (min-width: 1025px) {
-    height: 1093px;
-  }
+  height: 1102px;
 }
+// Section
 section {
   position: absolute;
   width: 100%;
