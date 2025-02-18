@@ -27,29 +27,29 @@ header img {
   top: 0;
   left: 0;
 }
-.heart input[type="checkbox"] {
+.heart input[type=checkbox] {
   display: none;
 }
 .heart .fa-solid {
   opacity: 0;
   color: transparent;
 }
-.heart input[type="checkbox"]:checked + .fa-regular {
+.heart input[type=checkbox]:checked + .fa-regular {
   opacity: 0;
   transition: opacity 200ms ease;
 }
-.heart input[type="checkbox"]:checked + .fa-regular + .fa-solid {
+.heart input[type=checkbox]:checked + .fa-regular + .fa-solid {
   opacity: 1;
   transition: opacity 200ms ease;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   -webkit-background-clip: text;
   background-clip: text;
 }
-.heart input[type="checkbox"]:not(:checked) + .fa-regular {
+.heart input[type=checkbox]:not(:checked) + .fa-regular {
   opacity: 1;
   transition: opacity 200ms ease;
 }
-.heart input[type="checkbox"]:not(:checked) + .fa-regular + .fa-solid {
+.heart input[type=checkbox]:not(:checked) + .fa-regular + .fa-solid {
   opacity: 0;
   transition: opacity 200ms ease;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
@@ -57,22 +57,22 @@ header img {
   background-clip: text;
 }
 @media screen and (min-width: 769px) {
-  .heart input[type="checkbox"]:hover + .fa-regular {
+  .heart input[type=checkbox]:hover + .fa-regular {
     opacity: 0;
     transition: opacity 200ms ease;
   }
-  .heart input[type="checkbox"]:hover + .fa-regular + .fa-solid {
+  .heart input[type=checkbox]:hover + .fa-regular + .fa-solid {
     opacity: 1;
     transition: opacity 200ms ease;
     background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
     -webkit-background-clip: text;
     background-clip: text;
   }
-  .heart input[type="checkbox"]:not(:hover) + .fa-regular {
+  .heart input[type=checkbox]:not(:hover) + .fa-regular {
     opacity: 1;
     transition: opacity 200ms ease;
   }
-  .heart input[type="checkbox"]:not(:hover) + .fa-regular + .fa-solid {
+  .heart input[type=checkbox]:not(:hover) + .fa-regular + .fa-solid {
     opacity: 0;
     transition: opacity 200ms ease;
     background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
@@ -143,4 +143,4 @@ footer img {
     order: 0;
     margin-bottom: 0;
   }
-} /*# sourceMappingURL=general.css.map */
+}/*# sourceMappingURL=general.css.map */
