@@ -8,7 +8,7 @@ body {
 header {
   text-align: center;
   background-color: #ffffff;
-  & img {
+  img {
     width: 200px;
     height: 34px;
     margin: 30px 0 30px 0;
@@ -20,45 +20,61 @@ header {
   width: 21px;
   height: 21px;
   cursor: pointer;
-  & i {
+  i {
     position: absolute;
     font-size: 21px;
     top: 0;
     left: 0;
   }
-  & input[type="checkbox"] {
+  input[type="checkbox"] {
     display: none;
   }
-  & .fa-solid {
-    color: transparent;
-    transition: background 400ms ease-in-out;
-  }
-  // Checkbox activation checked
-  & input[type="checkbox"]:checked + .fa-regular {
+  .fa-solid {
     opacity: 0;
-    transition: opacity 400ms ease-in-out;
+    color: transparent;
   }
-
-  & input[type="checkbox"]:checked + .fa-regular + .fa-solid {
-    animation: fillText 800ms forwards;
+  // Checkbox activation and inactive heart
+  input[type="checkbox"]:checked + .fa-regular {
+    opacity: 0;
+    transition: opacity 200ms ease;
   }
-   @media screen and (min-width: 769px) {
-    & input[type="checkbox"]:hover + .fa-regular {
+  input[type="checkbox"]:checked + .fa-regular + .fa-solid {
+    opacity: 1;
+    transition: opacity 200ms ease;
+    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  input[type="checkbox"]:not(:checked) + .fa-regular {
+    opacity: 1;
+    transition: opacity 200ms ease;
+  }
+  input[type="checkbox"]:not(:checked) + .fa-regular + .fa-solid {
+    opacity: 0;
+    transition: opacity 200ms ease;
+    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  @media screen and (min-width: 769px) {
+    input[type="checkbox"]:hover + .fa-regular {
       opacity: 0;
-      transition: opacity 400ms ease-in-out;
+      transition: opacity 200ms ease;
     }
-  
-    & input[type="checkbox"]:hover + .fa-regular + .fa-solid {
-      animation: fillText 800ms forwards;
-    }
-  }
-  @keyframes fillText {
-    0% {
-      background: transparent;
+    input[type="checkbox"]:hover + .fa-regular + .fa-solid {
+      opacity: 1;
+      transition: opacity 200ms ease;
+      background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
       -webkit-background-clip: text;
       background-clip: text;
     }
-    100% {
+    input[type="checkbox"]:not(:hover) + .fa-regular {
+      opacity: 1;
+      transition: opacity 200ms ease;
+    }
+    input[type="checkbox"]:not(:hover) + .fa-regular + .fa-solid {
+      opacity: 0;
+      transition: opacity 200ms ease;
       background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
       -webkit-background-clip: text;
       background-clip: text;
@@ -83,7 +99,7 @@ footer {
     padding: 30px 25px 30px 25px;
     gap: 30px;
   }
-  & ul {
+  ul {
     width: auto;
     margin: 0;
     display: flex;
@@ -97,21 +113,21 @@ footer {
       gap: 10px;
     }
   }
-  & li {
+  li {
     display: flex;
     gap: 10px;
     font-size: 16px;
     font-weight: 500;
-    & a {
+    a {
       text-decoration: none;
       color: inherit;
     }
   }
-  & .fa-solid {
+  .fa-solid {
     width: 16px;
     height: 13px;
   }
-  & img {
+  img {
     width: 139px;
     height: 27px;
     filter: brightness(0) invert(1);

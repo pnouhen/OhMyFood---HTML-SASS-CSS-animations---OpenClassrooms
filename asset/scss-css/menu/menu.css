@@ -199,17 +199,6 @@ section article .choice input[type=checkbox]:checked + .info-group + .check {
     width: 59px;
   }
 }
-section article .choice input[type=checkbox]:checked + .info-group + .check i {
-  animation: activerotation 400ms linear;
-}
-@keyframes activerotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
 section article .choice input[type=checkbox]:not(:checked) + .info-group + .check {
   animation: inactiveCheck 400ms forwards;
 }
@@ -221,17 +210,6 @@ section article .choice input[type=checkbox]:not(:checked) + .info-group + .chec
   to {
     opacity: 0;
     width: 0;
-  }
-}
-section article .choice input[type=checkbox]:not(:checked) + .info-group + .check i {
-  animation: inactiverotation 400ms linear;
-}
-@keyframes inactiverotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 @media screen and (min-width: 769px) {

@@ -47,7 +47,7 @@ h2 {
       width: 50vh;
       height: 50vh;
     }
-    & .cercle {
+    .cercle {
       width: 100%;
       height: 100%;
       border-radius: 50%;
@@ -73,14 +73,14 @@ h2 {
         transform: rotate(1080deg);
       }
     }
-    & i {
+    i {
       font-size: 5vw;
       opacity: 0;
       @media screen and (min-width: 769px) {
         font-size: 5vh;
       }
     }
-    & .fa-solid {
+    .fa-solid {
       animation: appear 500ms forwards;
       @keyframes appear {
         to {
@@ -88,7 +88,7 @@ h2 {
         }
       }
     }
-    & img {
+    img {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -104,28 +104,28 @@ h2 {
         opacity: 1;
       }
     }
-    & .fa-location-dot {
+    .fa-location-dot {
       position: absolute;
       top: 30%;
       left: 20%;
       transform: translate(-50%, -50%);
       animation-delay: 1000ms;
     }
-    & .fa-mobile-screen-button {
+    .fa-mobile-screen-button {
       position: absolute;
       top: 30%;
       right: 15%;
       transform: translate(-50%, -50%);
       animation-delay: 1500ms;
     }
-    & .fa-list {
+    .fa-list {
       position: absolute;
       bottom: 20%;
       right: 12.5%;
       transform: translate(-50%, -50%);
       animation-delay: 2000ms;
     }
-    & .fa-store {
+    .fa-store {
       position: absolute;
       bottom: 20%;
       left: 20%;
@@ -143,10 +143,10 @@ h2 {
   align-items: center;
   gap: 17px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  & i {
+  i {
     height: 16px;
   }
-  & p {
+  p {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
@@ -162,23 +162,23 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  & h1,
+  h1,
   p {
     text-align: center;
   }
-  & h1 {
+  h1 {
     font-size: 28px;
     font-weight: 700;
     @media screen and (min-width: 1025px) {
       font-size: 40px;
     }
   }
-  & p {
+  p {
     font-size: 18px;
     font-weight: 300;
     color: #353535;
   }
-  & a {
+  a {
     width: 218px;
     height: 50px;
     border-radius: 25px;
@@ -194,7 +194,7 @@ h2 {
     color: #ffffff;
     margin-top: 15px;
   }
-  & a:hover {
+  a:hover {
     animation-timing-function: ease-out;
     animation-duration: 300ms;
     opacity: 80%;
@@ -208,8 +208,11 @@ h2 {
   flex-wrap: wrap;
   align-items: center;
   gap: 25px;
-  padding: 50px 0 50px 0;
-  & ul {
+  padding: 50px 0 50px 12px;
+  h2 {
+    margin-left: -12px;
+  }
+  ul {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -221,7 +224,7 @@ h2 {
       gap: 50px;
     }
   }
-  & li {
+  li {
     position: relative;
     width: 100%;
     counter-increment: list-counter;
@@ -229,24 +232,25 @@ h2 {
     @media screen and (min-width: 1025px) {
       width: 31%;
     }
+    &::before {
+      position: absolute;
+      content: counter(list-counter) "";
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-color: #9356dc;
+      color: #ffffff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
-  & li::before {
-    position: absolute;
-    content: counter(list-counter) "";
-    left: -15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    background-color: #9356dc;
-    color: #ffffff;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 24px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  & div {
+
+  div {
     height: 72px;
     display: flex;
     align-items: center;
@@ -260,21 +264,21 @@ h2 {
     font-weight: 500;
     margin-right: auto;
   }
-  & i {
+  i {
     display: flex;
     align-items: center;
     margin-right: 10px;
     text-align: center;
   }
-  & .fa-mobile-screen-button {
+  .fa-mobile-screen-button {
     width: 13px;
     height: 20px;
   }
-  & .fa-mobile-screen-button,
-  & .fa-list {
+  .fa-mobile-screen-button,
+  .fa-list {
     color: #7e7e7e;
   }
-  & .fa-store {
+  .fa-store {
     height: 18px;
     color: #9356dc;
   }
@@ -290,7 +294,7 @@ h2 {
     gap: 50px;
     padding: 30px 0 30px 0;
   }
-  & article {
+  article {
     position: relative;
     width: 100%;
     height: 251px;
@@ -300,7 +304,7 @@ h2 {
     @media screen and (min-width: 769px) {
       width: 45%;
     }
-    & a {
+    a {
       width: 100%;
       height: 100%;
       position: relative;
@@ -309,7 +313,7 @@ h2 {
       justify-content: end;
       gap: 30px;
       text-decoration: none;
-      & span {
+      span {
         position: absolute;
         right: 5%;
         top: 13px;
@@ -325,7 +329,7 @@ h2 {
         justify-content: center;
         align-items: center;
       }
-      & img {
+      img {
         width: 100%;
         height: 231px;
         object-fit: cover;
@@ -333,19 +337,19 @@ h2 {
         top: -25%;
         left: 0;
       }
-      & div {
+      div {
         position: relative;
         display: flex;
         flex-direction: column;
         gap: 5px;
         padding: 0 0 20px 15px;
-        & h3 {
+        h3 {
           font-size: 18px;
           font-weight: 700;
           margin: 0;
           color: #000000;
         }
-        & p {
+        p {
           font-size: 17px;
           font-weight: 300;
           color: #000000;
@@ -353,11 +357,11 @@ h2 {
       }
     }
   }
-  & .heart {
+  .heart {
     position: absolute;
     top: 78%;
     left: 87%;
-    & i {
+    i {
       @media screen and (min-width: 769px) {
         left: 6px;
       }
