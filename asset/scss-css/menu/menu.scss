@@ -207,16 +207,9 @@ section {
         input[type="checkbox"]:hover + .info-group + .check {
           animation: activeCheck 400ms forwards;
         }
-        input[type="checkbox"]:hover + .info-group + .check i {
-          animation: activerotation 400ms linear;
-        }
         /* Inactivation hover */
         input[type="checkbox"]:not(:hover) + .info-group + .check {
           animation: inactiveCheck 400ms forwards;
-        }
-
-        input[type="checkbox"]:not(:hover) + .info-group + .check i {
-          animation: inactiverotation 400ms linear;
         }
       }
     }
